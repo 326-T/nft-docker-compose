@@ -1,0 +1,11 @@
+services:
+  nft-stock-client:
+    image: 326takeda/nft-stock-client:latest
+    ports:
+      - 3000:3000
+    environment:
+      - API_BASE_URL=http://nft-service:8080
+  nft-service:
+    image: 326takeda/nft-service:latest
+    ports:
+      - 8080:8080
